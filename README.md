@@ -1,45 +1,29 @@
-# 个人简历网站 | Personal Resume Website | Личный сайт-резюме
+# 赵松涛 | Personal Portfolio
 
-一个响应式的单页个人简历网站，支持中英俄三语切换。
+一个围绕工业软件、计算几何与 CAD 内核设计的中英文个人简历网站。
 
-A responsive single-page personal resume website with Chinese, English, and Russian language support.
+A bilingual portfolio focused on industrial software, computational geometry, and CAD kernels.
 
-Адаптивный одностраничный сайт-резюме с поддержкой китайского, английского и русского языков.
+## Features
 
----
+- 中文 / English 即时切换
+- 响应式桌面与移动端布局
+- 深色 / 浅色主题
+- 交互式 CAD 曲面线框
+- 滚动进度与渐入动效
+- 无框架、无构建步骤
 
-## 技术栈 | Tech Stack | Технологии
+## Run locally
 
-- HTML5, CSS3, JavaScript (ES6+)
-- 纯原生实现，无框架依赖 | Pure vanilla implementation, no framework dependencies | Чистая реализация без зависимостей от фреймворков
+```bash
+python -m http.server 4173
+```
 
----
+访问 `http://127.0.0.1:4173/`。
 
-## 功能特性 | Features | Функции
-
-- 🌐 三语切换（中文/English/Русский）
-- 🌓 亮色/暗色主题切换
-- 📱 完全响应式设计
-- ⚡ 平滑滚动与动画效果
-- 📊 技能进度条可视化
-
----
-
-## 部署 | Deployment | Развертывание
-
-通过 GitHub Pages 部署，访问链接：`https://cookie0629.github.io/My_resume/`
-
-Deployed via GitHub Pages. Visit: `https://cookie0629.github.io/My_resume/`
-
-Развернуто через GitHub Pages. Ссылка: `https://cookie0629.github.io/My_resume/`
-
----
-
-## 联系方式 | Contact | Контакты
+## Contact
 
 - Email: zhaosongtao645@gmail.com
-- Location: Novosibirsk, Russia | 新西伯利亚，俄罗斯 | Новосибирск, Россия
+- Location: Novosibirsk, Russia
 
----
-
-© 2026 Zhao Songtao. All rights reserved.
+© 2026 Zhao Songtao.

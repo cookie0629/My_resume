@@ -1,122 +1,20 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>赵松涛 | 工业软件开发工程师</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="lang-switcher">
-        <button onclick="switchLang('zh')" class="active" id="btn-zh">ZH</button>
-        <button onclick="switchLang('en')" id="btn-en">EN</button>
-        <button onclick="switchLang('ru')" id="btn-ru">RU</button>
-    </div>
+<!doctype html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="赵松涛，工业软件几何算法工程师，专注CAD内核、计算几何与OpenCASCADE。"><title>赵松涛 | 几何算法工程师</title><link rel="stylesheet" href="style.css"></head><body>
+<a class="skip" href="#main" data-zh="跳到正文" data-en="Skip to content">跳到正文</a><div class="progress"><i></i></div>
+<header><a class="brand" href="#home"><b>ZS</b><span>Zhao Songtao</span></a><nav><a href="#about" data-zh="关于" data-en="About">关于</a><a href="#work" data-zh="项目" data-en="Work">项目</a><a href="#journey" data-zh="经历" data-en="Journey">经历</a><a href="#skills" data-zh="技能" data-en="Skills">技能</a><a href="#life" data-zh="生活" data-en="Beyond">生活</a></nav><div class="actions"><button id="theme" aria-label="Toggle theme">☼</button><button id="lang" aria-label="Switch language">中 / EN</button><button id="menu" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button></div></header>
+<div class="mobile" aria-hidden="true"><a href="#about" data-zh="关于" data-en="About">关于</a><a href="#work" data-zh="项目" data-en="Work">项目</a><a href="#journey" data-zh="经历" data-en="Journey">经历</a><a href="#skills" data-zh="技能" data-en="Skills">技能</a><a href="#life" data-zh="生活" data-en="Beyond">生活</a></div>
+<main id="main"><section class="hero" id="home"><div class="grid"></div><canvas id="cad" aria-label="Animated CAD geometry"></canvas><div class="hero-copy reveal"><p class="status"><i></i><span data-zh="新西伯利亚 · 开放交流" data-en="NOVOSIBIRSK · OPEN TO CONNECT">新西伯利亚 · 开放交流</span></p><p class="eyebrow" data-zh="工业软件 / 计算几何" data-en="INDUSTRIAL SOFTWARE / COMPUTATIONAL GEOMETRY">工业软件 / 计算几何</p><h1><span data-zh="赵松涛" data-en="Zhao Songtao">赵松涛</span><small data-zh="几何算法工程师" data-en="Geometry Algorithm Engineer">几何算法工程师</small></h1><p class="lead" data-zh="我把曲面、拓扑与工程约束，写成可靠的几何算法。" data-en="I turn surfaces, topology, and engineering constraints into reliable geometry algorithms.">我把曲面、拓扑与工程约束，写成可靠的几何算法。</p><div class="cta"><a class="button primary" href="#work"><span data-zh="查看项目" data-en="Explore work">查看项目</span><b>↘</b></a><a class="button" href="赵松涛简历.pdf" target="_blank"><span data-zh="下载简历" data-en="Resume PDF">下载简历</span><b>↓</b></a></div></div><div class="hero-meta reveal"><span>OpenCASCADE</span><span>B-Rep</span><span>NURBS</span><span>C++ / Python</span></div><div class="hint">+ <span data-zh="移动鼠标，观察曲面" data-en="MOVE TO INSPECT SURFACE">移动鼠标，观察曲面</span></div></section>
 
-    <header class="hero" id="hero">
-        <canvas id="particle-canvas"></canvas>
-        <div class="hero-content reveal">
-            <h1 class="glitch-text i18n" 
-                data-zh="赵松涛" 
-                data-en="Songtao Zhao" 
-                data-ru="СунТао Чжао">赵松涛</h1>
-            <h2 class="role i18n" 
-                data-zh="工业软件开发工程师" 
-                data-en="Industrial Software Development Engineer" 
-                data-ru="Инженер-разработчик промышленного ПО">工业软件开发工程师</h2>
-            <p class="slogan">
-                <span class="code-bracket">&lt;</span>
-                <span class="i18n" 
-                      data-zh="用代码重塑物理世界 / 专注计算几何与底层架构" 
-                      data-en="Reshaping the physical world with code / Focused on computational geometry & architecture" 
-                      data-ru="Переосмысление физического мира с помощью кода / Фокус на вычислительной геометрии и базовой архитектуре">
-                    用代码重塑物理世界 / 专注计算几何与底层架构
-                </span>
-                <span class="code-bracket">/&gt;</span>
-            </p>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse"></div>
-        </div>
-    </header>
+<section class="section" id="about"><div class="label reveal"><b>01</b><span data-zh="关于我" data-en="About">关于我</span></div><div class="about"><h2 class="reveal" data-zh="在数学的精确与工程的现实之间，构建可以落地的答案。" data-en="Building practical answers between mathematical precision and engineering reality.">在数学的精确与工程的现实之间，构建可以落地的答案。</h2><div class="copy reveal"><p data-zh="你好，我是赵松涛。目前就读于新西伯利亚国立大学计算机科学与系统工程专业，同时在深圳市深思造物科技有限公司担任几何算法开发实习生。" data-en="Hi, I am Zhao Songtao. I study Computer Science and Systems Engineering at Novosibirsk State University and work as a Geometry Algorithm Intern at Shenzhen Shensi Zaowu Technology.">你好，我是赵松涛。目前就读于新西伯利亚国立大学计算机科学与系统工程专业，同时在深圳市深思造物科技有限公司担任几何算法开发实习生。</p><p data-zh="我专注工业软件底层引擎与计算几何，熟悉 B-Rep 拓扑处理、NURBS 理论和 OpenCASCADE。相比“做出一个效果”，我更在意算法能否进入真实工程链路，并被稳定复用。" data-en="I focus on industrial software kernels and computational geometry, with hands-on experience in B-Rep topology, NURBS, and OpenCASCADE. Beyond making a demo work, I care about algorithms that survive real engineering pipelines.">我专注工业软件底层引擎与计算几何，熟悉 B-Rep 拓扑处理、NURBS 理论和 OpenCASCADE。相比“做出一个效果”，我更在意算法能否进入真实工程链路，并被稳定复用。</p><div class="facts"><div><strong>03</strong><span data-zh="工作语言<br>中 / 英 / 俄" data-en="WORKING LANGUAGES<br>ZH / EN / RU">工作语言<br>中 / 英 / 俄</span></div><div><strong>2027</strong><span data-zh="预计本科毕业" data-en="EXPECTED GRADUATION">预计本科毕业</span></div><div><strong>CAD</strong><span data-zh="长期深耕方向" data-en="LONG-TERM FOCUS">长期深耕方向</span></div></div></div></div></section>
 
-    <section class="section container" id="education">
-        <h3 class="section-title i18n" data-zh="教育节点" data-en="Education" data-ru="Образование">教育节点</h3>
-        <div class="card reveal">
-            <div class="card-header flex-between">
-                <h4 class="i18n" data-zh="新西伯利亚国立大学 (NSU)" data-en="Novosibirsk State University (NSU)" data-ru="Новосибирский государственный университет (НГУ)">新西伯利亚国立大学 (NSU)</h4>
-                <span class="date">2023 - 2027</span>
-            </div>
-            <p class="accent-text i18n" data-zh="计算机科学与系统工程" data-en="Computer Science and Systems Engineering" data-ru="Компьютерные науки и системная инженерия">计算机科学与系统工程</p>
-        </div>
-    </section>
+<section class="section" id="work"><div class="section-head reveal"><div class="label"><b>02</b><span data-zh="精选项目" data-en="Selected work">精选项目</span></div><h2 data-zh="从几何原型，到生产链路。" data-en="From geometry prototypes to production pipelines.">从几何原型，到生产链路。</h2></div>
+<article class="project reveal"><b class="num">01</b><div class="project-copy"><div class="top"><span data-zh="汽车造型设计智能体" data-en="AUTOMOTIVE STYLING AGENT">汽车造型设计智能体</span><time>2026 — NOW</time></div><h3 data-zh="几何算法与 MVP 闭环研发" data-en="Geometry algorithms and an end-to-end MVP">几何算法与 MVP 闭环研发</h3><p data-zh="面向 Web 端 CAD 原型系统，负责几何算法、前后端 Service 层架构与 API 契约。从 STEP 导入归一化、多视图画线，到自动面片识别、曲线投影与 3D CV 编辑，最终完成特征拓扑写回。" data-en="For a web-based CAD prototype, I own geometry algorithms, service architecture, and API contracts: normalized STEP import, multi-view sketching, face recognition, curve projection, 3D CV editing, and feature topology write-back.">面向 Web 端 CAD 原型系统，负责几何算法、前后端 Service 层架构与 API 契约。从 STEP 导入归一化、多视图画线，到自动面片识别、曲线投影与 3D CV 编辑，最终完成特征拓扑写回。</p><div class="tags"><span>PythonOCC</span><span>MetaOP</span><span>STEP</span><span>UV Projection</span><span>Topology</span></div><div class="pipeline"><span>STEP</span><i></i><span>SKETCH</span><i></i><span>PROJECT</span><i></i><span>EDIT</span><i></i><span>WRITE</span></div></div><div class="visual surface"><div></div><i></i><span>FACE_024</span><b>G1</b></div></article>
+<article class="project reveal"><b class="num">02</b><div class="project-copy"><div class="top"><span data-zh="模具冲压" data-en="DIE STAMPING">模具冲压</span><time>2026</time></div><h3 data-zh="外圈线框凹面修补与 G1 连续桥接" data-en="Concavity repair and G1-continuous bridging">外圈线框凹面修补与 G1 连续桥接</h3><p data-zh="以凸包扫描与法向偏离检测过滤非目标特征，解决边缘 G1 锚点定位不稳；使用三次 Bezier 曲线完成连续桥接，并重构为标准闭合 TopoDS_Wire，供下游工艺面生成复用。" data-en="Filtered irrelevant features through convex-hull scanning and normal-deviation detection, stabilized G1 anchors, then built cubic Bezier bridges and a closed TopoDS_Wire for downstream reuse.">以凸包扫描与法向偏离检测过滤非目标特征，解决边缘 G1 锚点定位不稳；使用三次 Bezier 曲线完成连续桥接，并重构为标准闭合 TopoDS_Wire，供下游工艺面生成复用。</p><div class="tags"><span>Convex Hull</span><span>Bezier</span><span>G1 Continuity</span><span>TopoDS_Wire</span></div></div><div class="visual curve"><i></i><i></i><i></i><span>ANCHOR / 03</span></div></article>
+<article class="project reveal"><b class="num">03</b><div class="project-copy"><div class="top"><span data-zh="跨国技术协作" data-en="CROSS-BORDER COLLABORATION">跨国技术协作</span><time>CN · RU</time></div><h3 data-zh="让技术要求在三种语言之间保持精确" data-en="Keeping requirements precise across three languages">让技术要求在三种语言之间保持精确</h3><p data-zh="参与公司与俄罗斯工业软件企业合作，负责英文与俄文 SOW、商业合同技术细节翻译、需求澄清与交付标准界定，把语言差异还原成可执行的工程边界。" data-en="Supported collaboration with a Russian industrial software company through English and Russian SOW translation, requirement clarification, and delivery criteria definition.">参与公司与俄罗斯工业软件企业合作，负责英文与俄文 SOW、商业合同技术细节翻译、需求澄清与交付标准界定，把语言差异还原成可执行的工程边界。</p><div class="tags"><span>SOW</span><span>Requirements</span><span>中文</span><span>English</span><span>Русский</span></div></div><div class="visual languages"><strong>中</strong><i></i><strong>EN</strong><i></i><strong>РУ</strong></div></article></section>
 
-    <section class="section container" id="skills">
-        <h3 class="section-title i18n" data-zh="技术" data-en="Technical Stack" data-ru="Технический стек">技术底座</h3>
-        <div class="grid-layout">
-            <div class="card reveal">
-                <h4 class="card-title i18n" data-zh="编程语言" data-en="Languages & Algorithms" data-ru="Языки и Алгоритмы">编程语言</h4>
-                <ul class="skill-list">
-                    <li><span class="highlight">C/C++</span></li>
-                    <li><span class="highlight">Python</span></li>
-                    <li><span class="highlight">Java</span></li>
-                </ul>
-                <p class="desc i18n" data-zh="深度掌握底层语言，具备扎实的数据结构与算法基础，能够进行高性能计算开发。" data-en="Deep mastery of low-level languages, solid data structures & algorithms foundation for high-performance computing." data-ru="Глубокое владение низкоуровневыми языками, прочная база структур данных и алгоритмов для высокопроизводительных вычислений.">深度掌握底层语言，具备扎实的数据结构与算法基础，能够进行高性能计算开发。</p>
-            </div>
-            <div class="card reveal">
-                <h4 class="card-title i18n" data-zh="工业组件" data-en="Industrial Components & Engineering" data-ru="Промышленные компоненты и инженерия">工业组件</h4>
-                <ul class="skill-list">
-                    <li><span class="highlight">Open CASCADE (OCCT)</span></li>
-                    <li><span class="highlight">Linux</span></li>
-                    <li><span class="highlight">CMake</span></li>
-                    <li><span class="highlight">Git</span></li>
-                </ul>
-                <p class="desc i18n" data-zh="专注于几何引擎应用（NURBS、B样条），熟练掌握现代C++工程构建与版本控制。" data-en="Focused on geometry engine applications (NURBS, B-splines), proficient in modern C++ builds and version control." data-ru="Фокус на применении геометрических движков (NURBS, B-сплайны), уверенное владение современными сборками C++ и контролем версий.">专注于几何引擎应用（NURBS、B样条），熟练掌握现代C++工程构建与版本控制。</p>
-            </div>
-        </div>
-    </section>
+<section class="section" id="journey"><div class="section-head reveal"><div class="label"><b>03</b><span data-zh="经历" data-en="Journey">经历</span></div><h2 data-zh="学习与实践，相互校准。" data-en="Study and practice, continuously calibrating each other.">学习与实践，相互校准。</h2></div><div class="timeline"><article class="reveal"><time>2026.03 — <span data-zh="至今" data-en="NOW">至今</span></time><i></i><div><p data-zh="深圳市深思造物科技有限公司" data-en="Shenzhen Shensi Zaowu Technology">深圳市深思造物科技有限公司</p><h3 data-zh="几何算法开发实习生" data-en="Geometry Algorithm Intern">几何算法开发实习生</h3><small data-zh="工业软件 · 汽车设计 · 算法研发" data-en="INDUSTRIAL SOFTWARE · AUTOMOTIVE DESIGN · ALGORITHMS">工业软件 · 汽车设计 · 算法研发</small></div></article><article class="reveal"><time>2023.09 — 2027.06</time><i></i><div><p data-zh="新西伯利亚国立大学" data-en="Novosibirsk State University">新西伯利亚国立大学</p><h3 data-zh="计算机科学与系统工程 · 本科" data-en="BSc, Computer Science & Systems Engineering">计算机科学与系统工程 · 本科</h3><small data-zh="新西伯利亚，俄罗斯" data-en="NOVOSIBIRSK, RUSSIA">新西伯利亚，俄罗斯</small></div></article><article class="ghost reveal"><time data-zh="之后更新" data-en="TO BE UPDATED">之后更新</time><i></i><div><p data-zh="下一段坐标" data-en="Next coordinate">下一段坐标</p><h3 data-zh="仍在计算中…" data-en="Still computing…">仍在计算中…</h3></div></article></div></section>
 
-    <section class="section container" id="experience">
-        <h3 class="section-title i18n" data-zh="工作经验" data-en="Work Experience" data-ru="Опыт работы">工作经验</h3>
-        <div class="card empty-state reveal">
-            <span class="loader"></span>
-            <p class="i18n" data-zh="[ 核心数据加载中... 暂无条目 ]" data-en="[ Core data loading... TBD ]" data-ru="[ Загрузка основных данных... Нет записей ]">[ 核心数据加载中... 暂无条目 ]</p>
-        </div>
-    </section>
+<section class="section" id="skills"><div class="section-head reveal"><div class="label"><b>04</b><span data-zh="能力矩阵" data-en="Capability matrix">能力矩阵</span></div><h2 data-zh="工具会变，几何直觉会累积。" data-en="Tools change. Geometric intuition compounds.">工具会变，几何直觉会累积。</h2></div><div class="skills"><article class="reveal"><b>A</b><h3 data-zh="语言" data-en="Languages">语言</h3><div>C / C++<br>Python<br>Java</div></article><article class="reveal"><b>B</b><h3 data-zh="几何内核" data-en="Geometry kernel">几何内核</h3><div>OpenCASCADE<br>B-Rep Topology<br>NURBS<br>Analysis Situs</div></article><article class="reveal"><b>C</b><h3 data-zh="算法实践" data-en="Algorithm practice">算法实践</h3><div>Surface Projection<br>Curve Trimming<br>Feature Classification<br>Bezier / G1</div></article><article class="reveal"><b>D</b><h3 data-zh="沟通" data-en="Communication">沟通</h3><div>中文 · Native<br>English · Technical<br>Русский · Working</div></article></div></section>
 
-    <section class="section container" id="projects">
-        <h3 class="section-title i18n" data-zh="项目" data-en="Projects" data-ru="Проекты">项目</h3>
-        <div class="grid-layout">
-            <div class="card empty-state reveal">
-                <div class="wireframe-box"></div>
-                <h4 class="i18n" data-zh="项目代号: NULL" data-en="Project Codename: NULL" data-ru="Кодовое имя проекта: NULL">项目代号: NULL</h4>
-                <p class="i18n" data-zh="待构筑..." data-en="Under construction..." data-ru="В разработке...">待构筑...</p>
-            </div>
-            <div class="card empty-state reveal">
-                <div class="wireframe-box"></div>
-                <h4 class="i18n" data-zh="项目代号: NULL" data-en="Project Codename: NULL" data-ru="Кодовое имя проекта: NULL">项目代号: NULL</h4>
-                <p class="i18n" data-zh="待构筑..." data-en="Under construction..." data-ru="В разработке...">待构筑...</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer section container" id="contact">
-        <div class="contact-box reveal">
-            <h3 class="i18n" data-zh="建立连接" data-en="Establish Connection" data-ru="Установить соединение">建立连接</h3>
-            <p class="i18n prompt-text" data-zh="欢迎探讨底层开发与工业软件技术。" data-en="Welcome to discuss underlying development and industrial software technology." data-ru="Приглашаю к обсуждению базовой разработки и технологий промышленного ПО.">欢迎探讨底层开发与工业软件技术。</p>
-            <div class="contact-links">
-                <a href="mailto:zhaosongtao645@gmail.com" class="btn">
-                    <span class="icon">✉</span> zhaosongtao645@gmail.com
-                </a>
-                <a href="https://github.com/cookie0629" target="_blank" class="btn btn-outline">
-                    <span class="icon">⑂</span> GitHub
-                </a>
-            </div>
-        </div>
-        <p class="copyright">© 2026 ZHAO SONGTAO. SYS_ENGINEERING_NODE_ACTIVE.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<section class="section" id="life"><div class="section-head reveal"><div class="label"><b>05</b><span data-zh="下班以后" data-en="Beyond work">下班以后</span></div><h2 data-zh="脑海里不只有曲面。大概。" data-en="There is more than surfaces on my mind. Probably.">脑海里不只有曲面。大概。</h2></div><div class="life"><article class="reveal"><b>⌁</b><small>01</small><h3 data-zh="沿着城市走走" data-en="Walking through the city">沿着城市走走</h3><p data-zh="新西伯利亚还有很多坐标等待记录。" data-en="There are many Novosibirsk coordinates left to record.">新西伯利亚还有很多坐标等待记录。</p></article><article class="reveal"><b>◒</b><small>02</small><h3 data-zh="语言与文化" data-en="Language & culture">语言与文化</h3><p data-zh="在中文、英语和俄语之间，观察不同的思考方式。" data-en="Observing different ways of thinking across Chinese, English, and Russian.">在中文、英语和俄语之间，观察不同的思考方式。</p></article><article class="placeholder reveal"><b>+</b><small>03</small><h3 data-zh="之后更新" data-en="To be updated">之后更新</h3><p data-zh="这个格子留给下一件有趣的事。" data-en="Reserved for the next interesting thing.">这个格子留给下一件有趣的事。</p></article></div></section>
+<section class="contact"><div class="reveal"><p class="eyebrow" data-zh="保持联系" data-en="LET'S CONNECT">保持联系</p><h2 data-zh="有复杂的几何问题？<br>一起把它拆开。" data-en="A hard geometry problem?<br>Let's break it down.">有复杂的几何问题？<br>一起把它拆开。</h2><a href="mailto:zhaosongtao645@gmail.com">zhaosongtao645@gmail.com <b>↗</b></a><p><span>Novosibirsk · UTC+7</span><span data-zh="通常会在 48 小时内回复" data-en="Usually replies within 48 hours">通常会在 48 小时内回复</span></p></div></section></main>
+<footer><span><b>ZS</b> © 2026 Zhao Songtao</span><p data-zh="以拓扑连接，以好奇心驱动。" data-en="Connected by topology. Driven by curiosity.">以拓扑连接，以好奇心驱动。</p><a href="#home">↑</a></footer><script src="script.js"></script></body></html>

@@ -1,126 +1,13 @@
-// ==========================================
-// 1. 3D 几何粒子连线背景 (Canvas 特效)
-// ==========================================
-const canvas = document.getElementById('particle-canvas');
-const ctx = canvas.getContext('2d');
-
-let particlesArray = [];
-// 颜色取CSS变量的荧光青
-const particleColor = 'rgba(0, 255, 204, 0.8)';
-const lineColor = 'rgba(0, 255, 204, ';
-
-// 设置画布大小
-function setCanvasSize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-window.addEventListener('resize', setCanvasSize);
-setCanvasSize();
-
-// 粒子类定义
-class Particle {
-    constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 1; // 极简的点
-        this.speedX = (Math.random() - 0.5) * 1.5;
-        this.speedY = (Math.random() - 0.5) * 1.5;
-    }
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        // 碰撞边界反弹
-        if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
-        if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
-    }
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = particleColor;
-        ctx.fill();
-    }
-}
-
-// 初始化粒子网络
-function initParticles() {
-    particlesArray = [];
-    const numberOfParticles = (canvas.width * canvas.height) / 15000; // 密度计算
-    for (let i = 0; i < numberOfParticles; i++) {
-        particlesArray.push(new Particle());
-    }
-}
-
-// 动画循环与几何连线
-function animateParticles() {
-    requestAnimationFrame(animateParticles);
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let i = 0; i < particlesArray.length; i++) {
-        particlesArray[i].update();
-        particlesArray[i].draw();
-
-        // 检测距离，绘制网格线
-        for (let j = i; j < particlesArray.length; j++) {
-            const dx = particlesArray[i].x - particlesArray[j].x;
-            const dy = particlesArray[i].y - particlesArray[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            // 阈值：节点足够近时连线
-            if (distance < 120) {
-                // 距离越近，透明度越高，呈现 3D 纵深感
-                const opacity = 1 - (distance / 120);
-                ctx.beginPath();
-                ctx.strokeStyle = lineColor + opacity + ')';
-                ctx.lineWidth = 1;
-                ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
-                ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
-                ctx.stroke();
-            }
-        }
-    }
-}
-
-initParticles();
-animateParticles();
-
-
-// ==========================================
-// 2. Scroll Reveal 滚动监听淡入动画
-// ==========================================
-function revealElements() {
-    const reveals = document.querySelectorAll('.reveal');
-    const windowHeight = window.innerHeight;
-    const elementVisible = 100; // 元素距离底部多少触发
-
-    reveals.forEach(reveal => {
-        const elementTop = reveal.getBoundingClientRect().top;
-        if (elementTop < windowHeight - elementVisible) {
-            reveal.classList.add('active');
-        }
-    });
-}
-
-// 监听滚动事件，并初始化执行一次
-window.addEventListener('scroll', revealElements);
-revealElements();
-
-
-// ==========================================
-// 3. 中英俄三语切换逻辑 (原生实现)
-// ==========================================
-function switchLang(lang) {
-    // 1. 切换按钮状态
-    document.querySelectorAll('.lang-switcher button').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.getElementById(`btn-${lang}`).classList.add('active');
-
-    // 2. 遍历带有 i18n 类的 DOM，替换对应文本
-    const elements = document.querySelectorAll('.i18n');
-    elements.forEach(el => {
-        const newText = el.getAttribute(`data-${lang}`);
-        if (newText) {
-            el.textContent = newText;
-        }
-    });
-}
+const root=document.documentElement,theme=document.querySelector('#theme'),lang=document.querySelector('#lang'),menu=document.querySelector('#menu'),mobile=document.querySelector('.mobile'),bar=document.querySelector('.progress i');
+const savedTheme=localStorage.getItem('theme');if(savedTheme)root.dataset.theme=savedTheme;else if(matchMedia('(prefers-color-scheme: dark)').matches)root.dataset.theme='dark';
+theme.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';theme.textContent=root.dataset.theme==='dark'?'◐':'☼';localStorage.setItem('theme',root.dataset.theme)});theme.textContent=root.dataset.theme==='dark'?'◐':'☼';
+let language=localStorage.getItem('language')||'zh';function setLanguage(next){language=next;root.lang=next==='zh'?'zh-CN':'en';document.querySelectorAll('[data-zh][data-en]').forEach(el=>{el.innerHTML=el.dataset[next]});lang.textContent=next==='zh'?'中 / EN':'ZH / EN';document.title=next==='zh'?'赵松涛 | 几何算法工程师':'Zhao Songtao | Geometry Algorithm Engineer';localStorage.setItem('language',next)}setLanguage(language);lang.addEventListener('click',()=>setLanguage(language==='zh'?'en':'zh'));
+function toggleMenu(force){const open=typeof force==='boolean'?force:!mobile.classList.contains('open');mobile.classList.toggle('open',open);menu.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));mobile.setAttribute('aria-hidden',String(!open));document.body.style.overflow=open?'hidden':''}menu.addEventListener('click',()=>toggleMenu());mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggleMenu(false)));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+function scrollState(){const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=`${max?scrollY/max*100:0}%`}addEventListener('scroll',scrollState,{passive:true});scrollState();
+const canvas=document.querySelector('#cad'),ctx=canvas.getContext('2d');let pointer={x:0,y:0},size={w:0,h:0,dpr:1};const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function resize(){const r=canvas.getBoundingClientRect();size={w:r.width,h:r.height,dpr:Math.min(devicePixelRatio||1,2)};canvas.width=Math.round(size.w*size.dpr);canvas.height=Math.round(size.h*size.dpr);ctx.setTransform(size.dpr,0,0,size.dpr,0,0)}addEventListener('resize',resize);resize();
+canvas.parentElement.addEventListener('pointermove',e=>{pointer.x=(e.clientX/innerWidth-.5)*1.2;pointer.y=(e.clientY/innerHeight-.5)*1.2});
+function project(p,a){const ca=Math.cos(a+pointer.x*.3),sa=Math.sin(a+pointer.x*.3),cb=Math.cos(-.45+pointer.y*.25),sb=Math.sin(-.45+pointer.y*.25),x=p.x*ca-p.z*sa,z=p.x*sa+p.z*ca,y=p.y*cb-z*sb,d=p.y*sb+z*cb,s=1+d*.0011;return{x:size.w*.76+x*s,y:size.h*.48+y*s}}
+function point(u,v,a){const radius=120+28*Math.sin(v*2);return project({x:radius*Math.cos(u),y:v*72,z:radius*Math.sin(u)+24*Math.cos(v*2)},a)}
+function draw(t){ctx.clearRect(0,0,size.w,size.h);if(size.w>=720){const css=getComputedStyle(root),ink=css.getPropertyValue('--ink').trim(),accent=css.getPropertyValue('--accent').trim(),a=still?.4:t*.00008;ctx.lineWidth=1;for(let i=0;i<=15;i++){ctx.beginPath();for(let j=0;j<=45;j++){const p=point((i/15-.5)*Math.PI*1.9,(j/45-.5)*Math.PI*1.5,a);j?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y)}ctx.strokeStyle=i===7?accent:ink;ctx.globalAlpha=i===7?.85:.22;ctx.stroke()}for(let j=0;j<=18;j++){ctx.beginPath();for(let i=0;i<=50;i++){const p=point((i/50-.5)*Math.PI*1.9,(j/18-.5)*Math.PI*1.5,a);i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y)}ctx.strokeStyle=ink;ctx.globalAlpha=.17;ctx.stroke()}ctx.globalAlpha=1}requestAnimationFrame(draw)}requestAnimationFrame(draw);
